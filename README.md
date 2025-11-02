@@ -55,18 +55,18 @@
 
 ## View Package
 ### InputView
-[ ] getPurchaseAmount(): "구입금액을 입력해 주세요." 출력 및 Console.readLine() 반환
-[ ] getPrizeNumbers(): "당첨 번호를 입력해 주세요." 출력 및 Console.readLine() 반환
-[ ] getBonusNumber(): "보너스 번호를 입력해 주세요." 출력 및 Console.readLine() 반환
+[X] getPurchaseAmount(): "구입금액을 입력해 주세요." 출력 및 Console.readLine() 반환
+[X] getPrizeNumbers(): "당첨 번호를 입력해 주세요." 출력 및 Console.readLine() 반환
+[X] getBonusNumber(): "보너스 번호를 입력해 주세요." 출력 및 Console.readLine() 반환
 
 ### OutputView
-[ ] printLottoCount(): "%d개를 구매했습니다.%n" 형식으로 출력
-[ ] printLottos(List<Lotto> lottos): 전달받은 Lotto 목록을 순회
-[ ] formatLottoNumbers(List<Integer> numbers): lotto.getNumbers()로 받은 리스트를 "[1, 2, 3, 4, 5, 6]" 형식의 문자열로 포맷팅
-[ ] printStatisticsHeader(): "당첨 통계\n---" 출력
-[ ] printRankResults(Map<Prize, Integer> prizeCounts): Prize Enum을 FIFTH~FIRST 순서로 순회하며 정해진 형식으로 통계 출력
-[ ] printProfitRate(double profitRate): "총 수익률은 %.1f%%입니다.%n" 형식으로 수익률 출력
-[ ] printError(String message): [ERROR] 메시지 출력
+[X] printLottoCount(): "%d개를 구매했습니다.%n" 형식으로 출력
+[X] printLottos(List<Lotto> lottos): 전달받은 Lotto 목록을 순회
+[X] formatLottoNumbers(List<Integer> numbers): lotto.getNumbers()로 받은 리스트를 "[1, 2, 3, 4, 5, 6]" 형식의 문자열로 포맷팅
+[X] printStatisticsHeader(): "당첨 통계\n---" 출력
+[X] printRankResults(Map<Prize, Integer> prizeCounts): Prize Enum을 FIFTH~FIRST 순서로 순회하며 정해진 형식으로 통계 출력
+[X] printProfitRate(double profitRate): "총 수익률은 %.1f%%입니다.%n" 형식으로 수익률 출력
+[X] printError(String message): [ERROR] 메시지 출력
 
 ## Validation
 ### CommonValidatior
