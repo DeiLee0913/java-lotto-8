@@ -68,15 +68,22 @@
 [X] printProfitRate(double profitRate): "총 수익률은 %.1f%%입니다.%n" 형식으로 수익률 출력
 [X] printError(String message): [ERROR] 메시지 출력
 
-## Validation
-### CommonValidatior
-[ ] validateIsNumeric(String input): 입력이 숫자인지 검증
-[ ] validateIsNotEmpty(String input): 입력이 null이거나 빈 문자열("")인지 검증
-[ ] validateIsNumeric(String input): 문자열이 숫자로만 구성되었는지 검증 (e.g., "8000원", "abc")
+## Validation(Util)
+### InputValidatior
+[X] validatePurchaseAmount(String input): 구입 금액 문자열 검증
+    - validateIsNotEmpty
+    - validateIsNumeric
+[X] validatePrizeNumbers(String input): 당첨 번호 문자열 검증
+    - validateIsNotEmpty
+    - split(",") 후 6개가 맞는지 개수 검증
+    - for 문으로 6개 항목을 순회하며 validateIsNotEmpty + validateIsNumeric
+[X] validateBonusNumber(String input): 보너스 번호 문자열 검증
+    - validateIsNotEmpty
+    - validateIsNumeric
+---
+[X] validateIsNotEmpty(String input): null이거나 빈 문자열("")인지 검증 (공통 기능)
+[X] validateIsNumeric(String input): 문자열이 숫자로만 구성되었는지 검증 (공통 기능)
 
-### LottoInputValidator
-[ ] validatePrizeNumbersFormat(String input): 쉼표(,)로 나눴을 때 정확히 6개인지 **'개수'**를 검증
-[ ] validateAllNumericInList(String... numbers): 쉼표로 분리된 값들이 모두 숫자인지 검증 (e.g., "1,2,3,a,5,6")
 
 ## 구현 파일 구조(예상)
 src/main/java/lotto/
