@@ -14,44 +14,44 @@
 
 ## Model Package
 ### PurchaseAmount
-[ ] 생성자에서 int 금액을 받음
-[ ] 1,000원 미만인지 검증 -> 예외 발생 가능
-[ ] 1,000원 단위로 나누어 떨어지는지 검증 -> 예외 발생 가능
-[ ] getLottoCount(): 구입한 로또 개수 (amount / 1000)를 반환
+[X] 생성자에서 int 금액을 받음
+[X] 1,000원 미만인지 검증 -> 예외 발생 가능
+[X] 1,000원 단위로 나누어 떨어지는지 검증 -> 예외 발생 가능
+[X] getLottoCount(): 구입한 로또 개수 (amount / 1000)를 반환
 
 ### Lotto (로또 1장)
-[ ] 생성자에서 List<Integer>를 받음
-[ ] 생성자에서 List<Integer>를 오름차순으로 정렬하여 final 필드에 저장
-[ ] getNumbers(): View가 출력할 수 있도록 불변(Unmodifiable) 리스트 반환
-[ ] contains(int number): 특정 번호를 포함하고 있는지 여부 반환 (당첨 비교 시 사용)
+[X] 생성자에서 List<Integer>를 받음
+[X] 생성자에서 List<Integer>를 오름차순으로 정렬하여 final 필드에 저장
+[X] getNumbers(): View가 출력할 수 있도록 불변(Unmodifiable) 리스트 반환
+[X]] contains(int number): 특정 번호를 포함하고 있는지 여부 반환 (당첨 비교 시 사용)
 // 로또 추첨번호가 아닌 로또 당첨번호를 위한 검증
-[ ] numbers.size() != 6: 리스트의 크기가 6이 아닌지 검증
-[ ] numbers에 중복된 숫자가 있는지 검증 (e.g., [1, 2, 3, 4, 5, 5])
-[ ] numbers의 숫자가 1~45 범위를 벗어나는지 검증 (e.g., [0, 1, 2, 3, 4, 46])
+[x] numbers.size() != 6: 리스트의 크기가 6이 아닌지 검증
+[x] numbers에 중복된 숫자가 있는지 검증 (e.g., [1, 2, 3, 4, 5, 5])
+[X] numbers의 숫자가 1~45 범위를 벗어나는지 검증 (e.g., [0, 1, 2, 3, 4, 46])
 
 ### LottoMachine (로또 생성기) - 신규 제안
-[ ] generate(int count): count 개수만큼 로또를 생성
-[ ] camp.nextstep.edu.missionutils.Randoms.pickUniqueNumbersInRange(1, 45, 6) API를 사용하여 Lotto 객체를 생성
+[X] generate(int count): count 개수만큼 로또를 생성
+[X] camp.nextstep.edu.missionutils.Randoms.pickUniqueNumbersInRange(1, 45, 6) API를 사용하여 Lotto 객체를 생성
 
 ### WinningLotto (당첨 번호)
-[ ] 생성자에서 당첨 번호와 보너스 번호를 받음
+[X] 생성자에서 당첨 번호와 보너스 번호를 받음
 // 보너스 번호가 아닌 기본 당첨 번호는 로또에서 검증하므로 이 클래스에서는 보너스 번호만 검증
-[ ] 보너스 번호가 1~45 범위를 벗어나는지 검증 -> 예외 발생 가능
-[ ] 보너스 번호가 당첨 번호 6개와 중복되는지 검증 -> 예외 발생 가능
-[ ] match(Lotto lotto): 구매한 로또 1장과 비교하여 당첨 등급(Prize)을 반환
+[X] 보너스 번호가 1~45 범위를 벗어나는지 검증 -> 예외 발생 가능
+[X] 보너스 번호가 당첨 번호 6개와 중복되는지 검증 -> 예외 발생 가능
+[X] match(Lotto lotto): 구매한 로또 1장과 비교하여 당첨 등급(Prize)을 반환
 
 ### Prize (당첨 등급 - Enum)
-[ ] FIRST, SECOND, THIRD, FOURTH, FIFTH, MISS(꽝) 상수 정의
-[ ] 각 상수는 일치 개수와 상금(long)을 멤버로 가짐
-[ ] static valueOf(int matchCount, boolean bonusMatch): 일치 개수와 보너스 여부로 Prize 등급을 찾아 반환
-[ ] getMatchCount(), getPrizeMoney() Getter 제공
+[X] FIRST, SECOND, THIRD, FOURTH, FIFTH, MISS(꽝) 상수 정의
+[X] 각 상수는 일치 개수(int mathCount)와 상금(long prizeMoney)을 멤버로 가짐
+[X] static valueOf(int matchCount, boolean bonusMatch): 일치 개수와 보너스 여부로 Prize 등급을 찾아 반환
+[X] getMatchCount(), getPrizeMoney() Getter 제공
 
 ### LottoResult (통계 결과)
-[ ] 생성자에서 **구매한 로또 목록(List<Lotto>)**과 **당첨 번호(WinningLotto)**를 받음
-[ ] 생성자 내부에서 모든 로또를 순회하며 winningLotto.match()를 호출
-[ ] 당첨 통계를 집계하여 Map<Prize, Integer> 형태로 저장
-[ ] getPrizeCounts(): 집계된 Map을 반환
-[ ] calculateProfitRate(PurchaseAmount amount): 총 상금과 구입 금액을 비교하여 수익률 (double)을 계산 (소수점 반올림 로직 포함)
+[X] 생성자에서 **구매한 로또 목록(List<Lotto>)**과 **당첨 번호(WinningLotto)**를 받음
+[X] 생성자 내부에서 모든 로또를 순회하며 winningLotto.match()를 호출
+[X] 당첨 통계를 집계하여 Map<Prize, Integer> 형태로 저장
+[X] getPrizeCounts(): 집계된 Map을 반환
+[X] calculateProfitRate(PurchaseAmount amount): 총 상금과 구입 금액을 비교하여 수익률 (double)을 계산 (소수점 반올림 로직 포함)
 
 ## View Package
 ### InputView
