@@ -1,16 +1,16 @@
 # java-lotto-precourse
 
 ## Controller ( LottoGameController )
-[ ] run() 메서드에서 게임의 전체 로직(구매 -> 당첨 입력 -> 결과 발표)을 순서대로 호출
-[ ] InputView를 호출하여 raw string (e.g., "8000", "1,2,3,4,5,6") 입력을 받음
-[ ] 입력받은 raw string을 Validator를 통해 1차 검증
-[ ] 검증된 string을 Integer, List<Integer> 등으로 파싱(변환)
-[ ] 변환된 데이터를 Model 객체(e.g., PurchaseAmount, WinningLotto)의 생성자에 전달하여 객체 생성을 "요청"
-[ ] PurchaseAmount로부터 구매할 로또 개수를 받아, LottoMachine(로또 생성기)에 로또 생성을 "요청"
-[ ] OutputView를 호출하여 구매한 로otto 목록을 "전달" (출력 요청)
-[ ] LottoResult 객체를 생성하여 통계 및 수익률 계산을 "요청"
-[ ] LottoResult로부터 통계 결과(Map)와 수익률(double)을 받아 OutputView에 "전달" (출력 요청)
-[ ] Model 또는 View에서 IllegalArgumentException 발생 시, try-catch로 잡아서 OutputView.printError()를 호출하고, 해당 입력 단계부터 다시 시도하도록 제어
+[X] run() 메서드에서 게임의 전체 로직(구매 -> 당첨 입력 -> 결과 발표)을 순서대로 호출
+[X] InputView를 호출하여 raw string (e.g., "8000", "1,2,3,4,5,6") 입력을 받음
+[X] 입력받은 raw string을 Validator를 통해 1차 검증
+[X] 검증된 string을 Integer, List<Integer> 등으로 파싱(변환)
+[X] 변환된 데이터를 Model 객체(e.g., PurchaseAmount, WinningLotto)의 생성자에 전달하여 객체 생성을 "요청"
+[X] PurchaseAmount로부터 구매할 로또 개수를 받아, LottoMachine(로또 생성기)에 로또 생성을 "요청"
+[X] OutputView를 호출하여 구매한 로otto 목록을 "전달" (출력 요청)
+[X] LottoResult 객체를 생성하여 통계 및 수익률 계산을 "요청"
+[X] LottoResult로부터 통계 결과(Map)와 수익률(double)을 받아 OutputView에 "전달" (출력 요청)
+[X] Model 또는 View에서 IllegalArgumentException 발생 시, try-catch로 잡아서 OutputView.printError()를 호출하고, 해당 입력 단계부터 다시 시도하도록 제어
 
 ## Model Package
 ### PurchaseAmount
